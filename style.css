@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "font1";
+    src: url('/Applications/XAMPP/xamppfiles/htdocs/phpinperson/DesignThinking/fonts/Baskervville_SC,Cormorant_Garamond,Gupter/Baskervville_SC/BaskervvilleSC-Regular.ttf');
+}
+
+*{
+    font-family: 'font1';
+}
+body{
+    margin: 0;
+    padding: 0;
+    /* background: url('image/logo1.png'); */
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* background-color: wheat; */
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: -1; /* Keeps the overlay behind the content */
+}
+
+
+.logoDiv{
+    background-color: #d6dfe2;
+    text-align: center;
+}
+.logo{
+    width: 250px;
+    padding: 0.2rem;
+}
+
+.name{
+    color: rgb(81,140,170);
+    font-size: 25px;
+}
+.navbar{
+    background: #91242F;
+    
+}
+.collapse{
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.login{
+    background: #ffffff;
+    border-radius: 10px;
+    color: red;
+    
+    display: inline-block;
+}
+
+
+/* Slide-Show */
+#carouselExampleCaptions img{  
+    width: 100%;
+    height:500px;
+}
+.slide-text{
+    min-width: 10%;
+    background-color: rgba(0, 60, 150, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid lightblue;
+}
+.slide-text p{
+    padding:1rem;
+}
+ .book-button{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    border: 1.5px solid gray;
+    background-color: #ff5555;
+    padding: 0.5rem 1rem ;
+    border-radius: 10px;
+    /* background: #03396c; */
+ }
+ .book-button:hover{
+    
+    font-size: 1.5rem;
+    color: #ff5555;
+    border: 1.5px solid #ff5555;
+    background-color: white;
+    padding: 0.5rem 1rem ;
+    border-radius: 10px;
+    transition: 1s;
+    /* background: #03396c; */
+ }
+
+
+
+
+
+/* For Home Page */
+.promote .home-icons{
+    width: 100%;
+    
+}
+.promote .home-icons img{
+    width: 30%;
+    height: auto;
+}
+.promote .promote-text p{
+    /* padding: 1.2rem; */
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    background-color: #cdc6bd;
+    text-align: justify;
+}
+
+/* for inside of van */
+.insidevan .insidevan-item img{
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #99c5fd;
+}
