@@ -1,51 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+  <!-- Logo and Navbar -->
 <div class="logoDiv">
     <a href="index.php"><img src="image/AU-logo-txt-black.png" alt="" class="logo"></a>
-    <!-- <span class="name">Badda Station</span> -->
-</div>
-<?php
-  include 'navbar.php';
-?>
-<!-- Slide SHow -->
-
-<div id="carouselExampleCaptions" class="carousel slide mt-3 mb-3">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active ">
-      <img src="image/a4.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-md-block border slide-text">
-        <h5>Welcome To Vaniverse</h5>
-        <p class="">Your journey, your van, your way – <strong>book with ease today!</strong></p>
-        <button class="book-button">Book Your Adventure <i class="bi bi-search"></i></button>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="image/a2.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block border border-primary-subtle slide-text">
-        <h5>Welcome To Vaniverse</h5>
-        <p class="">Your journey, your van, your way – <strong>book with ease today!</strong></p>
-        <button class="book-button">Book Your Adventure <i class="bi bi-search"></i></button>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="image/a3.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block border border-primary-subtle slide-text">
-        <h5>Welcome To Vaniverse</h5>
-        <p class="">Your journey, your van, your way – <strong>book with ease today!</strong></p>
-        <button class="book-button">Book Your Adventure <i class="bi bi-search"></i></button>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
 
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="index.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="booking.php">Booking</a></li>
+        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="index.php">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="index.php">About</a></li>
+        <li class="nav-item"><a class="nav-link active login" id="loginBtn" aria-current="page" href="#">Login</a></li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Login Popup -->
+<div class="popup">
+    <div class="container-login">
+        <div class="close-arrow">
+            <i class="bi bi-x-circle"></i>
+        </div>
+        <form action="#" method="post">
+            <h1>Login</h1>
+            <div class="row">
+                <label for="">Email Address</label>
+                <input type="email" name="userEmail" class="userEmail">
+            </div>
+            <div class="row">
+                <label for="">Password</label>
+                <input type="password" name="userPassword" class="userPassword">
+            </div>
+            <div class="remember">
+                <input type="checkbox">Remember Me
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-link">
+                <p>Doesn't have an account yet? <a href="register.php" id="registerBtn"><u>Register</u></a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+  
+</body>
+</html>

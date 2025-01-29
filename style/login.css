@@ -1,0 +1,115 @@
+
+
+.login{
+    background: #ffffff;
+    border-radius: 10px;
+    color: red;
+    
+    display: inline-block;
+}
+
+/* For login */
+.popup{
+    transform: translate(-50%, -50%);
+    background:rgba(0,0,0,0.4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter:blur(10px);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    top: 50%; 
+    left: 50%; 
+}
+.container-login{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 2555, 255, .2);
+    backdrop-filter: blur(9px);
+    color: white;
+    border-radius: 13px;
+    padding: 30px 40px;
+    position: relative;
+
+}
+.container-login h1{
+    text-align: center;
+    font-size: 39px;
+    font-weight: 600;
+    padding-bottom: 26px;
+    letter-spacing: 0.5px;
+} 
+.container-login .close-arrow {
+    position: absolute;
+    font-size: 2rem;
+    top: 0; 
+    right: 0; 
+    color: #ff5555; 
+    border-radius: 50%; 
+    padding: 8px; 
+    cursor: pointer;
+}
+.container-login .row{
+    width: 100%;
+    height: 50px;
+    margin: 40px 0;
+    
+}
+.container-login .row label{
+    margin-left: 10px;
+    
+}
+.container-login .row input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 2555, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+}
+.container-login .btn{
+    width: 100%;
+    height: 45px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 550;
+    transition: all .4s ease-in-out;
+}
+.container-login .btn:hover{
+    transform: scale(1.05);
+}
+.container-login .remember{
+    font-size: 14.5px;
+    margin: 5px 16px 0 2px;
+    padding: 10px 0px;
+}
+.container-login .login-link p a{
+    text-decoration: none;
+    color: white;
+}
+.container-login .login-link p a:hover{
+    text-decoration: underline;
+    
+}
+.container-login .login-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px ;
+}
+@media only screen and (max-width: 520px) {
+    .container-login{
+        width: 90%;
+        padding: 30px 10px;
+    }
+}
