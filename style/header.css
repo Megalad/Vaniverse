@@ -10,14 +10,9 @@
 body{
     margin: 0;
     padding: 0;
-    /* background: url('image/logo1.png'); */
+    
     position: relative;
 
-    /* background-size: cover;
-    background-position: center;
-    background-attachment: fixed; */
-    
-    /* background-color: wheat; */
 }
 body::before {
     content: '';

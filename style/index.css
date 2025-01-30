@@ -1,9 +1,12 @@
 
-
+body{
+    background-color: rgb(255, 255, 255);
+}
 /* Slide-Show */
 #carouselExampleCaptions img{  
     width: 100%;
     height:500px;
+    background-color: white;
 }
 .slide-text{
     min-width: 10%;

@@ -19,7 +19,7 @@
                 <p class="text-justify me-2 mb-0">Login to your account to book for your ride!</p>
                 <a href="" class="text-white">Sign Up</a>
             </div>
-            <form action="" class="my-4 p-3 rounded">
+            <form action="" class="my-4 p-3 rounded booking-form">
                 <div>
                     <h2>Book Ride</h2>
                     <div class="row g-3  px-4">
@@ -50,10 +50,14 @@
                             <input type="date" class="form-control border border-black border-1 border-radius rounded">
                         </div>
                     </div>
-                    <div class="input-group row g-3  px-4 my-4">
+                    <div class="input-group row g-3  px-4 my-3 ">
                         <div class="col-md-4 col-12">
                             <label for="" class="form-label">Passengers</label>
-                            <input type="date" class="form-control border border-black border-1 border-radius rounded">
+                            <div class="wrapper">
+                                <span class="minus"><i class="bi bi-dash"></i></span>
+                                <span class="num">01</span>
+                                <span class="plus"><i class="bi bi-plus-lg"></i></span>
+                            </div>
                         </div>
                     </div>
 
