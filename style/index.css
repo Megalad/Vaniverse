@@ -1,0 +1,71 @@
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+/* Slide-Show */
+#carouselExampleCaptions img{  
+    width: 100%;
+    height:500px;
+    background-color: white;
+}
+.slide-text{
+    min-width: 10%;
+    background-color: rgba(0, 60, 150, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid lightblue;
+}
+.slide-text p{
+    padding:1rem;
+}
+ .book-button{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    border: 1.5px solid gray;
+    background-color: #ff5555;
+    padding: 0.5rem 1rem ;
+    border-radius: 10px;
+    /* background: #03396c; */
+ }
+ .book-button:hover{
+    
+    font-size: 1.5rem;
+    color: #ff5555;
+    border: 1.5px solid #ff5555;
+    background-color: white;
+    padding: 0.5rem 1rem ;
+    border-radius: 10px;
+    transition: 1s;
+    /* background: #03396c; */
+ }
+
+
+
+
+
+/* For Home Page */
+.promote .home-icons{
+    width: 100%;
+    
+}
+.promote .home-icons img{
+    width: 30%;
+    height: auto;
+}
+.promote .promote-text p{
+    /* padding: 1.2rem; */
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    background-color: #cdc6bd;
+    text-align: justify;
+}
+
+/* for inside of van */
+.insidevan .insidevan-item img{
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #99c5fd;
+}

@@ -1,0 +1,187 @@
+.glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px); 
+    border-radius: 10px; 
+  }
+
+  .bg-primary {
+    background-color: #91242F !important; 
+  }
+  
+  .text-primary {
+    color: #91242F !important;
+  }
+  .btn-red{
+    background-color: #91242F !important;
+    color: white;
+  }
+  .map-container iframe {
+    height: 100%; /* Full height for the iframe */
+    width: 100%; /* Full width for the iframe */
+    border: 0;   /* Remove borders */
+}
+.card-full-height {
+    height: 100%; /* Full height of the parent */
+}
+
+.fixed-img {
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+}
+
+/* Adjust height for smaller screens */
+@media (max-width: 768px) {
+    .fixed-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .fixed-img {
+        height: 180px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #91242F, #1C1C1C);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #91242F, rgba(255, 255, 255, 0.1));
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #F8E6E7;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.content-section {
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.content-item {
+    position: relative;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(145, 36, 47, 0.8), rgba(28, 28, 28, 0.8));
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content-item:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.content-item h3 {
+    position: relative;
+    color: #F8E6E7;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+}
+
+.content-item p {
+    position: relative;
+    color: #e0e0e0;
+    z-index: 2;
+}
+
+.content-item img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+footer {
+    background: #1C1C1C;
+    padding: 2rem 0;
+    text-align: center;
+    color: white;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #91242F, #F8E6E7);
+    border: none;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #F8E6E7, #91242F);
+}
+
+
+    .icon-gradient {
+        background: linear-gradient(90deg, #91242F, #FF6363);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .btn-gradient {
+        background: linear-gradient(90deg, #91242F, #FF6363);
+        color: #fff;
+        border: none;
+    }
+
+    .btn-gradient:hover {
+        background: linear-gradient(90deg, #FF6363, #91242F);
+    }
+
+    .stat-container {
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stat-container:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-section {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        padding: 2rem;
+        height: 100%; /* Ensure full height */
+    }
+
+    .map-section {
+        height: 100%; /* Ensure full height */
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
