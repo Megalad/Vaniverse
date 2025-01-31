@@ -1,12 +1,4 @@
-@font-face {
-    font-family: "font1";
-    src: url('/Applications/XAMPP/xamppfiles/htdocs/phpinperson/DesignThinking/fonts/Baskervville_SC,Cormorant_Garamond,Gupter/Baskervville_SC/BaskervvilleSC-Regular.ttf');
-}
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500&display=swap');
 
-*{
-    font-family: 'font1';
-}
 body{
     margin: 0;
     padding: 0;

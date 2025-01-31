@@ -1,0 +1,76 @@
+html, body {
+    background-color: #fff !important;
+}
+
+.container{
+    background-color: whitesmoke;
+    padding: 10px;
+}
+.card-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+}
+.row{
+    width: 80%;
+}
+.info-box {
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+.info-box p {
+    margin: 0;
+}
+.van-box {
+    border-radius: 10px;
+    
+    background-color: gray;
+    color: white;
+}
+.price-box {
+    background-color: #66b3ff;
+    
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+}
+
+.arrow{
+    background-color: black;
+    width: 20vw;
+    height: 1px;
+    margin: 0px 20px;
+    position: relative;
+}
+.movingvan {
+    position: absolute;
+    top: -0.6rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.movingvan img {
+    width: 40px; /* Adjust size */
+    height: auto;
+}
+
+
+.texts{
+    font-size: 1.5rem;
+    color: #91242f;
+}
+.price{
+    font-size: 1.5rem;
+}
+.booknow{
+    font-size: 0.7rem;
+}
+.time{
+    position: absolute;
+    top: 0;
+}
