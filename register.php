@@ -6,16 +6,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="style/register.css">
 </head>
 <body>
     <div class="container-fluid">
     <?php
-        include 'header.php';
-    ?>
+include 'header.php';
+include 'db/dbhandler.php';
+
+$message = ""; // Initialize message
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $studentID=$_POST['Id'];
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['cpassword'];
+
+    if ($password !== $confirmPassword) {
+        $message = "<div class='alert alert-danger'>Passwords do not match.</div>";
+    } else {
+        $result = addCustomer($name,$studentID,$email, customerPhone: $phone, password: $password);
+        if (is_numeric($result)) {
+            $message = "<div class='alert alert-success'>Registration successful! Your ID is $result.</div>";
+        } else {
+            $message = "<div class='alert alert-danger'>$result</div>";
+        }
+    }
+}
+?>
+
     </div>
     <div class="container-register register my-5 d-flex justify-content-center align-items-center">
-        <form action="" method="post" class="border border-primary rounded-5 p-3 bg-info-subtle ">
+        <form action="register.php" method="post" class="border border-primary rounded-5 p-3 bg-info-subtle ">
+            <?php if (!empty($message)) { echo $message; } ?>
             <div>
                 <h1 class="text-center fs-2 my-3">Registration</h1>
                 <div class="row g-3  px-4">
@@ -61,7 +86,7 @@
                     <button class="btn btn-danger me-5">
                     Reset<span class="ms-1"><i class="bi bi-trash"></i></span>
                     </button>
-                    <button class="btn btn-success">
+                    <button type="submit" name="submit" class="btn btn-success">
                     Submit <span class="ms-1"><i class="bi bi-file-earmark-arrow-up"></i></span>
                     </button>
                 </div>

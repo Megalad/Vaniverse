@@ -10,8 +10,9 @@
 </head>
 <body class="booking">
     <div class="container-fluid">
-        <?php include 'header.php'; ?>
-
+        <?php
+            include 'header.php';
+        ?>
         <div class="container-booking register my-5 d-flex flex-column justify-content-center align-items-center px-3">
             <div class="d-inline-block d-flex flex-row justify-content-center align-items-center p-2 information text-center w-80">
                 <i class="bi bi-info-circle-fill me-2"></i>
@@ -19,39 +20,59 @@
                 <a href="" class="text-white">Sign Up</a>
             </div>
 
-            <form action="" class="my-4 p-3 rounded booking-form w-80">
+            <form action="routes.php" method="post" class="my-4 p-3 rounded booking-form w-80" enctype="multipart/form-data">
                 <h2 class="py-3">Book Ride</h2>
 
                 <div class="row g-3 px-2">
                     <div class="col-lg-4 col-md-6 col-12">
                         <label class="form-label">From</label>
-                        <select class="form-select border border-black">
+                        <select class="form-select border border-black" name="fromLocation">
+
                             <option selected disabled>Select the place</option>
-                            <option value="">Mega</option>
-                            <option value="">Siam</option>
-                            <option value="">Ispace</option>
-                            <option value="">D-condo</option>
-                            <option value="">King Solomon</option>
+                            <?php
+                            
+                                include 'db/dbhandler.php';
+                                
+                                $locations=DBHandler::getAllLocation();
+                                if ($locations) {
+                                    foreach ($locations as $location) {
+                                        $name = htmlspecialchars($location['locationName']);
+                                        echo "<option value='$name'>$name</option>";
+                                    }
+                                } else {
+                                    echo "<option disabled>Error loading locations</option>";
+                                }
+
+                            ?>
                         </select>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
                         <label class="form-label">To</label>
-                        <select class="form-select border border-black">
+                        <select class="form-select border border-black" name="toLocation">
+
                             <option selected disabled>Select the place</option>
-                            <option value="">Mega</option>
-                            <option value="">Siam</option>
-                            <option value="">Ispace</option>
-                            <option value="">D-condo</option>
-                            <option value="">King Solomon</option>
+                            <?php
+                                
+                                $locations=DBHandler::getAllLocation();
+                                if ($locations) {
+                                    foreach ($locations as $location) {
+                                        $name = htmlspecialchars($location['locationName']);
+                                        echo "<option value='$name'>$name</option>";
+                                    }
+                                } else {
+                                    echo "<option disabled>Error loading locations</option>";
+                                }
+
+                            ?>
                         </select>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
                         <label class="form-label">Date</label>
-                        <input type="date" class="form-control border border-black">
+                        <input type="date" class="form-control border border-black" name="travelDate">
+
                     </div>
                 </div>
-
-                <div class="row g-3 px-2 my-3">
+                <!-- <div class="row g-3 px-2 my-3">
                     <div class="col-md-6 col-12">
                         <label class="form-label">Passengers</label>
                         <div class="d-flex align-items-center">
@@ -60,9 +81,20 @@
                             <button type="button" class="btn btn-outline-secondary plus">+</button>
                         </div>
                     </div>
+                </div> -->
+
+                <div class="row g-3 px-2 my-3">
+                    <div class="col-md-6 col-12">
+                        <label class="form-label">Passengers</label>
+                        <div class="d-flex align-items-center">
+                            <!-- <button type="button" class="btn btn-outline-secondary minus">-</button> -->
+                            <input type="number" id="numSeats" name="numSeats" class="form-control text-center mx-2" value="1" min="1" required>
+                            <!-- <button type="button" class="btn btn-outline-secondary plus">+</button> -->
+                        </div>
+                    </div>
                 </div>
                 <div class="d-flex justify-content-end mt-3 px-2">
-                    <button type="submit" class="btn btn-primary px-4 py-2">Search</button>
+                    <button type="submit" class="btn btn-primary px-4 py-2" name="btnSearch">Search</button>
                 </div>
             </form>
         </div>

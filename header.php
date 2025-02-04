@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  include 'db/db.php';
+  $isLoggedIn = isset($_SESSION['userEmail']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,9 +27,12 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="index.php">Home</a></li>
         <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="booking.php">Booking</a></li>
-        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="index.php">Schedule</a></li>
-        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="index.php">About</a></li>
-        <li class="nav-item"><a class="nav-link active login" id="loginBtn" aria-current="page" href="#">Login</a></li>
+        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="about.php">About</a></li>
+        <?php if ($isLoggedIn): ?>
+            <li class="nav-item"><a class="nav-link active text-dark logout" href="logout.php">Logout</a></li>
+          <?php else: ?>
+            <li class="nav-item"><a class="nav-link active text-dark login" id="loginBtn" href="#">Login</a></li>
+          <?php endif; ?>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
