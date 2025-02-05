@@ -1,0 +1,27 @@
+body {
+    background-color: #f8f9fa;
+}
+.nav-bar {
+    background-color: #fdfd96;
+    padding: 1rem;
+}
+.nav-bar a {
+    text-decoration: none;
+    margin: 0 15px;
+}
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+footer {
+    margin-top: 2rem;
+    background-color: #fff;
+    border-top: 1px solid #dee2e6;
+    padding: 1rem;
+}
